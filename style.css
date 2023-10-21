@@ -1,0 +1,133 @@
+:root {
+    /* ### Primary */
+
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+
+    /* ### Neutral */
+
+   --Dark-gray: hsl(0, 0%, 59%);
+   --white: white;
+
+   --fuente: 'Kumbh Sans', sans-serif;
+}
+
+html {
+    font-size: 18px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(--fuente);
+}
+
+.contenedor__principal {
+    min-width: 300px;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor__principal::before {
+    content: '';
+    background: url(images/bg-pattern-top.svg) top / contain repeat var(--Dark-cyan);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    z-index: -10;
+}
+
+.contenedor__principal::after {
+    content: '';
+    background: url(images/bg-pattern-bottom.svg) bottom / contain repeat var(--Dark-cyan);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 51%;
+    z-index: -20;
+}
+
+.contenedor__secundario {
+    min-width: 100px;
+    max-width: 340px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+}
+
+.contenedor__img-backgorund {
+    position: relative;
+}
+
+.contenedor__img-backgorund img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    position: absolute;
+}
+
+.contenedor__img-perfil img {
+    position: absolute;
+    border-radius: 50%;
+    border: 7px solid var(--white);
+    width: 110px;
+    left: 115px;
+    top: 86px;
+    z-index: 50;
+}
+
+.contenedor__datos-usuario {
+    background: var(--white);
+    /* position: relative;
+    top: -5px; */
+    margin-top: 135px;
+    padding-top: 80px;
+    text-align: center;
+    color: var(--Very-dark-desaturated-blue);
+    font-size: .5rem;
+    letter-spacing: .3px;
+    font-weight: 700;
+    border-bottom: 2px solid rgba(150, 150, 150, .15)
+}
+
+.contenedor__datos-usuario span {
+    color: var(--Dark-gray);
+    font-weight: 700;
+    margin-left: 6.6px;
+}
+
+.contenedor__datos-usuario h2 {
+    color: var(--Dark-gray);
+    margin: 10px 0 0 0;
+    padding-bottom: 31px;
+    font-weight: 400;
+}
+
+.contenedor__estadisticas {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 24px 0;
+    background: var(--white);
+    border-radius: 0 0 10px 10px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: var(--Dark-grayish-blue);
+    color: var(--Very-dark-desaturated-blue);
+    font-size: .83rem;
+}
+
+.contenedor__estadisticas span {
+    color: var(--Dark-gray);
+    font-size: .6rem;
+    font-weight: 400;
+}
